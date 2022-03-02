@@ -19,3 +19,5 @@
 [7-movethatfile](./7-movethatfile) script to move the file betty from /tmp/ to /tmp/my_first_directory.
 ## Bye bye Betty
 [8-firstdelete](./8-firstdelete) script delete the file betty. The file betty is in /tmp/my_first_directory
+## Bye bye My first directory
+[9-firstdirdeletion](./9-firstdirdeletion) script to delete the directory "my_first_directory" that is in the /tmp directory.
