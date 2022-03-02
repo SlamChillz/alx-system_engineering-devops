@@ -6,3 +6,5 @@
 [2-bring_me_home](./2-bring_me_home) script that changes the working directory to the user’s home directory.
 ## The long format
 [3-listfiles](./3-listfiles) script display current directory contents in a long format
+## Hidden files
+[4-listmorefiles](./4-listmorefiles) script display current directory contents, including hidden files (starting with "."). Use the long format.
