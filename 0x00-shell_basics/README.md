@@ -17,3 +17,5 @@
 [6-firstdirectory](./6-firstdirectory) script that creates a directory named my_first_directory in the /tmp/ directory.
 ## Betty in my first directory
 [7-movethatfile](./7-movethatfile) script to move the file betty from /tmp/ to /tmp/my_first_directory.
+## Bye bye Betty
+[8-firstdelete](./8-firstdelete) script delete the file betty. The file betty is in /tmp/my_first_directory
