@@ -8,3 +8,8 @@
 [3-listfiles](./3-listfiles) script display current directory contents in a long format
 ## Hidden files
 [4-listmorefiles](./4-listmorefiles) script display current directory contents, including hidden files (starting with "."). Use the long format.
+## I love numbers
+[5-listfilesdigitonly](./5-listfilesdigitonly) script display current directory contents:
+- Long format
+- with user and group IDs displayed numerically
+- And hidden files (starting with .)
