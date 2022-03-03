@@ -10,3 +10,5 @@
 [4-empty](./4-empty) script that create an empty file.
 ## Execute
 [5-execute](./5-execute) scripts that adds execution permission to file 'hello'.
+## Multiple permissions
+[6-multiple_permissions](./6-multiple_permissions) script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
