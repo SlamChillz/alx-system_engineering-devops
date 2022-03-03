@@ -23,3 +23,5 @@
 [9-John_Doe](./9-John_Doe) that sets the mode of the file hello to this: ## -rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
 ## Look in the mirror
 [10-mirror_permissions](./10-mirror_permissions) script that sets the mode of the file hello the same as olleh’s mode.
+## Directories
+[11-directories_permissions](./11-directories_permissions) script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
