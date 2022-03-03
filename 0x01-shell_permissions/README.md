@@ -8,3 +8,5 @@
 [3-new_owner](./3-new_owner) script  that changes the owner of the file hello to the user betty.
 ## Empty file
 [4-empty](./4-empty) script that create an empty file.
+## Execute
+[5-execute](./5-execute) scripts that adds execution permission to file 'hello'.
