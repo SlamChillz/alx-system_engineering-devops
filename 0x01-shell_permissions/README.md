@@ -19,3 +19,5 @@
 - Owner: no permission at all
 - Group: no permission at all
 - Other users: all the permissions
+## John Doe
+[9-John_Doe](./9-John_Doe) that sets the mode of the file hello to this: ## -rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
