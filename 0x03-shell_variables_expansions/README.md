@@ -35,3 +35,5 @@ This project involves practice on shell script initialization, working with vari
 - Your script file should contain maximum 64 characters
 ## Float
 [13-print_float](./13-print_float) a script that prints a number with two decimal places, followed by a new line.
+## Decimal to hexadecimal
+[100-decimal_to_hexadecimal](./100-decimal_to_hexadecimal) a script that converts a number from base 10 to base 16.
