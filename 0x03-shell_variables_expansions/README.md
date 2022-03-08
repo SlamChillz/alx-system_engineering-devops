@@ -6,3 +6,5 @@ This project involves practice on shell script initialization, working with vari
 - Value: 'rm *'
 ## Hello you
 [1-hello_you](./1-hello_you) a script that prints the current Linux user
+## The path to success is to take massive, determined action
+[2-path](./2-path) a script that adds '/action' to $PATH.
