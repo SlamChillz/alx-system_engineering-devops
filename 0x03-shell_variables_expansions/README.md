@@ -10,3 +10,5 @@ This project involves practice on shell script initialization, working with vari
 [2-path](./2-path) a script that adds '/action' to $PATH.
 ## If the path be beautiful, let us not ask where it leads
 [3-paths](./3-paths) a script to number of directories in $PATH variable.
+## Global variables
+[4-global_variables](./4-global_variables) a script print all environmental variables.
