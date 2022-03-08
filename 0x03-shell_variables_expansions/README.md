@@ -16,3 +16,5 @@ This project involves practice on shell script initialization, working with vari
 [5-local_variables](./5-local_variables) a script that lists all local variables and environment variables, and functions.
 ## Create a local variable
 [7-create_global_variable](./7-create_global_variable) a script that creates a new local variable.
+## Create global variable
+[7-create_global_variable](./7-create_global_variable) a script that creates a new global variable.
