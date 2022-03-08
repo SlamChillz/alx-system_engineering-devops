@@ -25,4 +25,11 @@ This project involves practice on shell script initialization, working with vari
 ## Breath and love
 [10-love_exponent_breath](./10-love_exponent_breath) a script that displays the result of BREATH to the power LOVE.
 ## Binary to decimal
-[11-binary_to_decimal](./5-local_variables) a script that converts a number from base 2 to base 10.
+[11-binary_to_decimal](./11-binary_to_decimal) a script that converts a number from base 2 to base 10.
+## Combination
+[12-combinations](./12-combinations) a script that prints all possible combinations of two letters, except oo.
+- Letters are lower cases, from a to z
+- One combination per line
+- The output should be alpha ordered, starting with aa
+- Do not print oo
+- Your script file should contain maximum 64 characters
