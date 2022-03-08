@@ -22,3 +22,5 @@ This project involves practice on shell script initialization, working with vari
 [8-true_knowledge](./8-true_knowledge) a script that prints the result of the addition of 128 with the value stored in the environment variable TRUEKNOWLEDGE, followed by a new line.
 ## Divide and rule
 [9-divide_and_rule](./9-divide_and_rule) a script that prints the result of POWER divided by DIVIDE, followed by a new line.
+## Breath and love
+[10-love_exponent_breath](./10-love_exponent_breath) a script that displays the result of BREATH to the power LOVE.
