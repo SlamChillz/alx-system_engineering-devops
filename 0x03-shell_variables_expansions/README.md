@@ -24,3 +24,5 @@ This project involves practice on shell script initialization, working with vari
 [9-divide_and_rule](./9-divide_and_rule) a script that prints the result of POWER divided by DIVIDE, followed by a new line.
 ## Breath and love
 [10-love_exponent_breath](./10-love_exponent_breath) a script that displays the result of BREATH to the power LOVE.
+## Binary to decimal
+[11-binary_to_decimal](./5-local_variables) a script that converts a number from base 2 to base 10.
