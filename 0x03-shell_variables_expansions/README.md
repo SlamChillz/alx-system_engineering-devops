@@ -39,3 +39,5 @@ This project involves practice on shell script initialization, working with vari
 [100-decimal_to_hexadecimal](./100-decimal_to_hexadecimal) a script that converts a number from base 10 to base 16.
 ## Everyone is a proponent of strong encryption
 [101-rot13](./101-rot13) a script that encodes and decodes text using the rot13 encryption. Assume ASCII.
+## The eggs of the brood need to be an odd number
+[102-odd](./102-odd) a script that prints every other line from the input, starting with the first line.
