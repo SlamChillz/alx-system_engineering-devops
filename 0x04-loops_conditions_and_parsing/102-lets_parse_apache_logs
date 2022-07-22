@@ -4,4 +4,7 @@
 
 FILE="./apache-access.log"
 
-awk '{print $1,$9}' $FILE
+if [ -f "$FILE" ]
+then
+	awk '{print $1,$9}' $FILE
+fi

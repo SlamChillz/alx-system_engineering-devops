@@ -4,8 +4,6 @@
 
 FILE=/etc/passwd
 
-i=0
-
 lines=0
 
 IFS=':'
@@ -14,10 +12,13 @@ lines="$(wc -l < $FILE)"
 
 fields=('USERNAME' 'PASSWORD' 'USERID' 'GROUPID' 'USERIDINFO' 'HOMEDIR' 'SHELL')
 
-while [[ $i -lt $lines ]]; do
-	i="$((i + 1))"
+i=1
+
+while [[ $i -le $lines ]]
+do
     	read -r -a fields < <(tail -n 1 <(head -n $i < $FILE))
     	echo -n "The user ${fields[0]} is part of the ${fields[3]} gang, lives in ${fields[5]} and "
 	echo -n "rides ${fields[6]}. ${fields[2]}'s place is protected by the passcode ${fields[1]}, more "
 	echo "info about the user here: ${fields[4]}"
+	(( i++ ))
 done
