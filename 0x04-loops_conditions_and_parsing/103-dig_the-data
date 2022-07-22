@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# script that prints the number of occurrences of 
+#+ the same IP address and HTTP status code of an Apache HTTP request log
+
+
+FILE="apache-access.log"
+
+if [ -f $FILE ]
+then
+  awk '{ print $1,$9 }' $FILE | sort | uniq -c | sort -rn
+fi

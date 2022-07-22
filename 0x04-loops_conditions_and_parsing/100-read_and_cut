@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# script that displays the content of the file '/etc/passwd'
+# fields to display 'username, user id, home directory path for user'
+
+IFS=$'\n'
+
+read -d '' -r -a lines < /etc/passwd
+
+i=0
+
+while [ "${lines[i]}" != "" ]
+do
+	line=${lines[i]}
+	
+	echo "$line" | cut -d':' -f1,3,6
+
+	(( i++ ))
+done

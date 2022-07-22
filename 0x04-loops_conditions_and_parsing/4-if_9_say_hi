@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using 'while' loop
+# At the 9th loop print 'Hi' on a new line
+
+const="Best School"
+
+(( count = 1 ))
+
+
+while [ "$count" -le 10 ]
+do
+	echo "$const"
+
+	if [ "$count" -eq 9 ]
+	then
+		echo "Hi"
+	fi
+
+	(( count++ ))
+done

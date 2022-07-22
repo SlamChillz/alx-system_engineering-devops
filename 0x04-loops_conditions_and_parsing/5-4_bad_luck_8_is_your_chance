@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using 'while' loop
+# Replaces the 4th with 'bad luck' and the 8th with 'good luck'
+
+const="Best School"
+
+(( count = 1 ))
+
+
+while [ "$count" -le 10 ]
+do
+	if [ "$count" -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ "$count" -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "$const"
+	fi
+
+	(( count++ ))
+done

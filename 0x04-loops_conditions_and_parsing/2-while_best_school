@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times using 'while' loop
+
+const="Best School"
+
+(( count = 1 ))
+
+
+while [ "$count" -le 10 ]
+do
+	echo "$const"
+	(( count++ ))
+done

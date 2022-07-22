@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays content of the current directory in a list format,
+#+ where only the part of the name after the first dash is displayed
+
+FILES=$(ls ./)
+
+for f in $FILES;
+do
+	echo "$f" | cut -d '-' -f2
+done
