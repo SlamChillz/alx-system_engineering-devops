@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Bash script that:
+# Creates the file `/var/run/myscript.pid` containing its PID
+# Displays `To infinity and beyond` indefinitely
+# Displays `I hate the kill command` when receiving a `SIGTERM` signal
+# Displays `Y U no love me?!` when receiving a SIGINT signal
+# Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
+
+
+function createFile() {
+        sudo touch "$1";
+        sudo chown "$USER":"$USER" "$1";
+        echo "$$" > "$1";
+}
+
+function deleteFile() {
+	sudo rm "$FILE" 2> /dev/null
+	exit
+}
+
+function termHandler() {
+        printf "I hate the kill command\n";
+	deleteFile
+}
+
+function intHandler() {
+        printf "Y U no love me?!\n"
+}
+
+FILE="/var/run/myscript.pid"
+
+trap "termHandler" SIGTERM
+trap "intHandler" SIGINT
+trap "deleteFile" SIGQUIT
+
+createFile "$FILE"
+
+while 'true'
+do
+	printf "To infinity and beyond\n"
+	sleep 1
+done

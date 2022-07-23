@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Bash script that displays `To infinity and beyond` indefinitely
+# In between each iteration of the loop, add a `sleep 2`
+# Prints `I am invincible!!!` when receiving a `SIGTERM` signal
+
+function termHandler() {
+        printf "I am invincible!!!\n"
+}
+
+trap "termHandler" SIGTERM
+
+while 'true'
+do
+	printf "To infinity and beyond\n"
+
+	sleep 2
+done
