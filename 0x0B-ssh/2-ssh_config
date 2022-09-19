@@ -2,3 +2,6 @@ Host *
    IdentityFile ~/.ssh/school
    PasswordAuthentication no
    PreferredAuthentications publickey
+   SendEnv LANG LC_*
+   HashKnownHosts yes
+   GSSAPIAuthentication yes
