@@ -1,37 +1,29 @@
 # A manifest to install nginx web server
 
-$doc_root = '/var/www/html'
-
 exec { 'apt-get update':
-  command => 'apt-get -y update',
-  path    => '/usr/bin:/usr/sbin:/bin'
+  command => '/usr/bin/apt-get -y update',
 }
 
 package { 'nginx':
   ensure  => 'installed',
-  require => Exec['apt-get update']
+  require => Exec['apt-get update'],
 }
 
-file { $doc_root:
-  ensure => 'directory',
-}
-
-file { '$doc_root/index.html':
+file { 'index-html':
   ensure  => 'present',
-  content => 'Hello World',
-  require => File[$doc_root]
+  path    => '/var/www/html/index.html',
+  content => 'Hello World!',
 }
 
-file_line { '/etc/nginx/sites-available/default':
-  ensure  => 'present',
+file_line { 'redirect':
   path    => '/etc/nginx/sites-available/default',
-  line    => '\trewrite ^/redirect_me https://www.google.com permanent;\n}',
-  match   => '^}$',
+  after   => 'server_name _;',
+  line    => 'rewrite ^/redirect_me https://www.google.com permanent;',
   notify  => Service['nginx'],
-  require => Package['nginx']
+  require => Package['nginx'],
 }
 
 service { 'nginx':
   ensure => running,
-  enable => true
+  enable => true,
 }
