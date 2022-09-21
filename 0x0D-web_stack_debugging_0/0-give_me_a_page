@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script to get an apache2 server running
+
+service apache2 status
+service apache2 start
