@@ -6,9 +6,7 @@ apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
-new_string="\trewrite ^\/redirect_me https:\/\/www.google.com permanent;\n}"
+echo "Ceci n'est pas une page" > /var/www/html/notfound.html
+new_string="\terror_page 404 \/notfound.html;\n\tlocation = \/notfound.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}\n}"
 sed -i "s/^}$/$new_string/" /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" | tee /var/www/html/notfound.html > /dev/null
-new_string="\terror_page 404 \/notfound.html;\n\tlocation = \/notfound.html {\n\t\tinternal;\n\t}\n}"
-sed -i "s/^}$/$new_string/" /etc/nginx/sites-available/default
-service nginx start
+service nginx restart
