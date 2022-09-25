@@ -1,6 +1,6 @@
 # Attack is the best defense
 
-The objects of this project are:
+The objectives of this project are:
 
 - Hacking
 - Network sniffing
@@ -56,7 +56,7 @@ sylvain@ubuntu$
 	- This prints outgoing packets from your device in plain text
 - Open terminal2 and run the given script `./user_authenticating_into_server`
 	- At the end of this script execution, analyse terminal1 to find the `[base64 encoded user password]`
-- Using the base64 terminal command of the web application GUI, decode the base64 string to get the password.
+- Using the linux base64 terminal command or the web application GUI, decode the base64 string to get the password.
 
 
 ## Dictionary attack
