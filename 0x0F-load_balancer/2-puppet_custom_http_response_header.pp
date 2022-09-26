@@ -1,4 +1,4 @@
-# A manifest to install nginx web server
+# A manifest to install nginx web server and set custom header
 
 exec { 'apt-get update':
   command => '/usr/bin/apt-get -y update',
@@ -17,8 +17,8 @@ file { 'index-html':
 
 file_line { 'custom-header':
   path    => '/etc/nginx/sites-available/default',
-  after   => 'location / {',
-  line    => '\tadd_header X-Served-By $hostname;',
+  after   => 'server_name _;',
+  line    => 'add_header X-Served-By $hostname;',
   notify  => Service['nginx'],
   require => Package['nginx'],
 }
