@@ -29,6 +29,7 @@ Create a certificate using `certbot` and configure `HAproxy` to accept encrypted
 - HAproxy must serve encrypted traffic that will return the / of your web server
 - When querying the root of your domain name, the page returned must contain Holberton School
 - Share your HAproxy config as an answer file (`/etc/haproxy/haproxy.cfg`)
+[certbot](./certbot) installation reference
 
 ## [Task 3](./100-redirect_http_to_https)
 A good habit is to enforce HTTPS traffic so that no unencrypted traffic is possible. Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
