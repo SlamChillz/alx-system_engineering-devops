@@ -3,5 +3,7 @@
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
-sudo ufw allow proto tcp from any to any port 22,80,443 comment "Allow access to ssh, http & https via tcp protocol"
+sudo ufw allow 22/tcp comment "Allow ssh via tcp protocol"
+sudo ufw allow 80/tcp comment "Allow http traffic via tcp protocol"
+sudo ufw allow 443/tcp comment "Allow https traffic via tcp protocol"
 echo y | sudo ufw enable
