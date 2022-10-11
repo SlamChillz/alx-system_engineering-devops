@@ -3,4 +3,4 @@
 pkill apache2
 chmod u=rw,g=rw,o=rw /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
-sudo -H -u nginx -c "service nginx start"
+sudo -H -u nginx bash -c "service nginx start"
