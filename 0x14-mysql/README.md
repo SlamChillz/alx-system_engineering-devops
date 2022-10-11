@@ -13,4 +13,4 @@ The general objectives of this project are:
 ### [0. Install MySQL](./0-install_mysql5.7)
 Install  MySQL on both your web-01 and web-02 servers.
 - MySQL distribution must be 5.7.x
-- [signature key](./signature.key) for installation
+- [public gpg key](./signature.key) for installation
