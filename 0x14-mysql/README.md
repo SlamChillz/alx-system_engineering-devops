@@ -48,3 +48,15 @@ Having a replica member on for your MySQL database has 2 advantages:
 
 - Once MySQL replication is setup, add a new record in your table via MySQL on `web-01` and check if the record has been replicated in MySQL `web-02`. If you see it, it means your replication is working!
 - `Make sure that UFW is allowing connections on port 3306 (default MySQL port) otherwise replication will not work.`
+
+[5. MySQL backup](./5-mysql_backup)
+Bash script that generates a MySQL dump and creates a compressed archive out of it.
+
+**Requirements:**
+
+- The MySQL dump must contain all your MySQL databases
+- The MySQL dump must be named backup.sql
+- The MySQL dump file has to be compressed to a tar.gz archive
+- This archive must have the following name format: day-month-year.tar.gz
+- The user to connect to the MySQL database must be root
+- The Bash script accepts one argument that is the password used to connect to the MySQL database
