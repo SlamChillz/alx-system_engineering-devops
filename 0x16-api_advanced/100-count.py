@@ -5,7 +5,7 @@ Defines a function that queries Reddit API
 import requests
 
 
-def recurse(subreddit, word_list, after=None, worddict={}, ctr=0):
+def count_words(subreddit, word_list, after=None, worddict={}, ctr=0):
     """
     Queries Reddit API, parses the title of all hot articles, and
     prints a sorted count of given keywords (case-insensitive, delimited
