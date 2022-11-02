@@ -7,9 +7,17 @@ import requests
 
 def count_words(subreddit, word_list, after=None, worddict={}, ctr=0):
     """
-    Print the number of occurences of words in word_list that
-    appear in the titles of the hot posts listed for the
-    subreddit recursively
+    Queries the Reddit API, parses the title of all hot articles,
+    and prints a sorted count of given keywords (case-insensitive, delimited
+    by spaces. Javascript should count as javascript, but java should not)
+    Ags:
+        subreddit (str): name of subreddit
+        word_list (list): keywords to look out for
+        after (str): identifier of the last item on a listing
+        worddict (dict): results to be returned
+        ctr (int): condition to convert word_list to worddict
+    Returns:
+        worddict (dict) || None if subreddit is invalid
     """
     url = "https://reddit.com/r/" + subreddit + \
         "/hot.json?limit=100&after={}".format(after)
