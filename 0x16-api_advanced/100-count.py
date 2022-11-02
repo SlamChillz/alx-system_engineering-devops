@@ -21,7 +21,7 @@ def count_words(subreddit, word_list, after=None, worddict={}, ctr=0):
     """
     url = "https://reddit.com/r/" + subreddit + \
         "/hot.json?limit=100&after={}".format(after)
-    headers = {'User-Agent': 'Mozilla/5.0'}
+    headers = {'User-Agent': 'advanced-api/0.0.1 by Mendy'}
     post = requests.get(url=url, headers=headers, allow_redirects=False)
     tpost = requests.get(
         url=post.headers['Location'], headers=headers, allow_redirects=False)
