@@ -11,9 +11,7 @@ def top_ten(subreddit):
     of the first 10 hot posts listed for a given subreddit
     """
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    headers = {
-        'User-Agent': 'advanced-api/0.0.1 by Mendy'
-    }
+    headers = {'User-Agent': 'advanced-api/0.0.1 by Mendy'}
     req = requests.get(url=url, headers=headers, allow_redirects=False)
     if req.status_code == 200:
         response = req.json()
