@@ -1,0 +1,19 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+    
+        server_name _;
+
+        location / {
+                proxy_pass http://127.0.0.1:5000/$uri;
+        }
+
+        location ~ /(airbnb-dynamic/)?number_odd_or_even/([0-9]+).* {
+                rewrite ^/airbnb-dynamic/(number_odd_or_even)/([0-9]+).* /$1/$2;
+                proxy_pass http://127.0.0.1:5001/$uri;
+        }
+
+        location /api/ {
+                proxy_pass http://127.0.0.1:5002/$uri;
+        }
+}
